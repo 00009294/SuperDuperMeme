@@ -7,11 +7,16 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponent {
   @Input() message!: string;
-  @Output() greetEvent = new EventEmitter();
-  childMessage = "this is child message";
+  childMessage = "this message comes from child compoenent";
 
-  callParentGreet(){
-    this.greetEvent.emit(this.childMessage);
+  @Output() messageSender = new EventEmitter();
+
+  receiveMessage(){
+    this.messageSender.emit(this.childMessage);
+  }
+
+  removeMessage(){
+    this.messageSender.emit('');
   }
 
 }
