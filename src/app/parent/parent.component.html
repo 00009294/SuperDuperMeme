@@ -1,3 +1,5 @@
 <h1>Parent component</h1>
-<p>Child message: {{childMessage}}</p>
+<div [ngClass]="{changeBackground: childMessage != ''}">
+    <p>Child message: {{childMessage}}</p>
+</div>
 <app-child [message]="parentMessage" (messageSender)="receiverMessage($event)"></app-child>

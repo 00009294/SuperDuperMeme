@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
 
-  childMessage!: string;
+  childMessage = '';
   parentMessage = "This is parent message";
 
   receiverMessage(title: string){
