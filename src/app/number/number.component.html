@@ -1,0 +1,10 @@
+<button class="btn btn-primary"
+    (click)="showNumbers()">
+    Only show odd numbers
+</button>
+<ul>
+    <li *ngFor="let number of showNumbers()">
+        {{number}}
+    </li>
+    
+</ul>
