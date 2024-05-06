@@ -10,7 +10,8 @@ export class ParentComponent {
   childMessage!: string;
   parentMessage = "This is parent message";
 
-  greet(message: string){
-    this.childMessage = message;
+  receiverMessage(title: string){
+    this.childMessage = title;
   }
+  
 }
